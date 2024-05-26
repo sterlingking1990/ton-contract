@@ -1,0 +1,28 @@
+    try {
+        const tonConnect = new TonConnect({
+            manifestUrl: 'https://YOUR_DOMAIN/tonconnect-manifest.json'
+        });
+
+        // Open the TON Connect UI for connection
+        const connection:any = await tonConnect.connect({
+            bridgeUrl: 'https://bridge.tonapi.io/bridge',
+            universalLink: 'https://tonkeeper.app/ton-connect'
+        });
+
+        console.log("Connection string:", connection.connectionString);
+
+        // Wait for the user to complete the connection in the wallet app
+        await new Promise((resolve) => setTimeout(resolve, 15000));
+
+        // Send the transaction
+        await connection.sendTransaction({
+            address: address.toString({ testOnly: true }),
+            amount: toNano("0.05").toString(10),
+            payload: stateInitCell.toBoc({ idx: false }).toString("base64"),
+            validUntil: Date.now() + 5 * 60 * 1000, // Valid for 5 minutes
+        });
+
+        console.log("Contract deployed successfully");
+    } catch (error) {
+        console.error("Error during deployment:", error);
+    }
