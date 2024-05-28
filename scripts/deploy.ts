@@ -27,7 +27,7 @@ async function deployScript() {
         code: codeCell,
         data: dataCell
     });
-
+    
     console.log(`Future address of our current contract is ${address}`);
     let link = `ton://transfer/` +
         address.toString({
