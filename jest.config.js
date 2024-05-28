@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   preset: 'ts-jest/presets/default-esm', // Use the ESM preset
   testEnvironment: 'node',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
@@ -16,3 +16,5 @@ export default {
   ],
   extensionsToTreatAsEsm: ['.ts'], // Treat .ts files as ESM
 };
+
+
