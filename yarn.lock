@@ -837,6 +837,16 @@
   dependencies:
     node-inspect-extracted "^2.0.0"
 
+"@tonclient/core@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@tonclient/core/-/core-1.30.0.tgz#789d919e51c8aa86a9718521b5658666e75b521d"
+  integrity sha512-/3ECtGoyOs22U3QjD0stxxPOS39tumFvkx2xly3QJmIUhZccoFMwgWzah8QelLz4+nzzaDJxGeVgiknfgsGSZg==
+
+"@tonclient/lib-node@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@tonclient/lib-node/-/lib-node-1.30.0.tgz#2ae938959f6d55ce93810b0920d4059088a5f6ab"
+  integrity sha512-gp2l5E0rDOJOYA3J9U0RxDu/kkUVkvGrQfOieyc6qd1EcwS+Zuac4KJvmrpxITkUBNDCJd2dhLeXoyOIjdQe/g==
+
 "@tonconnect/isomorphic-eventsource@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@tonconnect/isomorphic-eventsource/-/isomorphic-eventsource-0.0.2.tgz#e58c44cf9953e090f2c35da9a638946ddb614be5"
@@ -3390,10 +3400,10 @@ token-types@^5.0.0-alpha.2:
     "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
 
-ton-core@^0.48.0:
-  version "0.48.0"
-  resolved "https://registry.yarnpkg.com/ton-core/-/ton-core-0.48.0.tgz#df744c9b13b3193cb7eb8a9cbb715bcf0437e467"
-  integrity sha512-v3QL0CC8iQQ0cjUN0lI9hK7wEpLW2Wnm+N5Ukm+NSbtQ0vq36LGQR/BRywoOQZJm59XzmW4ATbtCWeas9ePrRA==
+ton-core@^0.53.0:
+  version "0.53.0"
+  resolved "https://registry.yarnpkg.com/ton-core/-/ton-core-0.53.0.tgz#88ce0c0dbdbb548cd46f1984639c4738b06f38dd"
+  integrity sha512-uO/U1oVLdEliWWbwfNQQK+61C+KM0ehcTdHQ6cN0WSEH2UzGfdVFpC4Wb0ph+wUYe/5njl7TA0uL9nif9Q6qwA==
   dependencies:
     symbol.inspect "1.0.1"
 

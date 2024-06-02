@@ -27,7 +27,7 @@ async function deployScript() {
         code: codeCell,
         data: dataCell
     });
-    
+
     console.log(`Future address of our current contract is ${address}`);
     let link = `ton://transfer/` +
         address.toString({
@@ -39,7 +39,7 @@ async function deployScript() {
             amount: toNano("0.05").toString(10),
             init: stateInitCell.toBoc({ idx: false }).toString("base64")
         });
-    console.log("please scan the code below to deploy to the address in " + process.env.TESTNET?'testnet':'mainnet')
+    console.log(`please scan the code below to deploy to the address in  ${process.env.TESTNET?`"testnet"`:`"mainnet"`}`)
     qrcode.generate(link, { small: true }, (code) => {
         console.log(code)
     })
