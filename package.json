@@ -6,6 +6,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@swc/core": "^1.5.7",
+    "@ton-community/blueprint": "^0.12.0",
     "@ton-community/func-js": "^0.7.0",
     "@ton-community/sandbox": "^0.11.0",
     "@ton-community/test-utils": "^0.3.0",
@@ -25,13 +26,7 @@
     "typescript": "^5.0.2"
   },
   "scripts": {
-    "build": "tsc --project ./tsconfig.json",
-    "compile": "ts-node ./scripts/compile",
-    "test": "yarn compile && jest",
-    "deploy": "npm run compile && TESTNET=true ts-node --project ./tsconfig.json ./scripts/deploy",
-    "deploy:mainnet": "npm run compile && ts-node --project ./tsconfig.json ./scripts/deploy",
-    "onchaintest": "TESTNET=true ts-node ./scripts/onchaintest",
-    "onchaintest:mainnet": "ts-node ./scripts/onchaintest"
+    "test": "jest"
   },
   "dependencies": {
     "@orbs-network/ton-access": "^2.3.3",

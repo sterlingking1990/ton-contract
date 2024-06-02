@@ -26,6 +26,15 @@ export class MainContract implements Contract {
     return new MainContract(address, init);
   }
 
+  //add blueprint deploy script
+  async sendDeploy(provider:ContractProvider, via:Sender, value:bigint){
+    await provider.internal(via, {
+      value,
+      sendMode:SendMode.PAY_GAS_SEPARATELY,
+      body:beginCell().storeUint(2,32).endCell(),
+    });
+  }
+
 
   async sendIncrement(
     provider:ContractProvider,
