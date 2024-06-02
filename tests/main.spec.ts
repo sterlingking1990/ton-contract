@@ -22,7 +22,7 @@ describe('main.fc contract tests', () => {
 
     const myContract = blockchain.openContract(
       await MainContract.createFromConfig({
-        number:0,
+        counter_value:1,
         address:initAddress.address
       },codeCell))
 
@@ -32,7 +32,7 @@ describe('main.fc contract tests', () => {
     const sendMessageResult = await myContract.sendIncrement(
       senderWallet.getSender(),
       toNano("0.05"),
-      1
+      5
     );
 
     //expect that comm. extablished from my senderwallet addr to contract address
@@ -47,6 +47,6 @@ describe('main.fc contract tests', () => {
 
     // Check the address of the sender from the mock contract message
     expect(data.recent_sender.toString()).toBe(senderWallet.address.toString());
-    expect(data.number).toEqual(1);
+    expect(data.number).toEqual(6);
   });
 });

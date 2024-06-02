@@ -1,11 +1,11 @@
 import { Address, Cell, Contract, ContractProvider, SendMode, Sender, beginCell, contractAddress } from "ton-core";
 
 export type MainContractConfig = {
-  number: number;
+  counter_value: number;
   address: Address;
 };
 export function mainContractConfigToCell(config: MainContractConfig): Cell {
-  return beginCell().storeUint(config.number, 32).storeAddress(config.address).endCell();
+  return beginCell().storeUint(config.counter_value, 32).storeAddress(config.address).endCell();
 }
 export class MainContract implements Contract {
   constructor(
