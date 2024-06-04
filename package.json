@@ -26,7 +26,7 @@
     "typescript": "^5.0.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "yarn jest"
   },
   "dependencies": {
     "@orbs-network/ton-access": "^2.3.3",
