@@ -3,10 +3,10 @@ import { Address, Cell, Contract, ContractProvider, SendMode, Sender, beginCell,
 export type MainContractConfig = {
   counter_value: number;
   address: Address;
-  ownerAddress:Address;
+  owner_address:Address;
 };
 export function mainContractConfigToCell(config: MainContractConfig): Cell {
-  return beginCell().storeUint(config.counter_value, 32).storeAddress(config.address).storeAddress(config.ownerAddress).endCell();
+  return beginCell().storeUint(config.counter_value, 32).storeAddress(config.address).storeAddress(config.owner_address).endCell();
 }
 export class MainContract implements Contract {
   constructor(

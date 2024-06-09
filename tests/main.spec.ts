@@ -25,7 +25,7 @@ describe('main.fc contract tests', () => {
       await MainContract.createFromConfig({
         counter_value:1,
         address:initWallet.address,
-        ownerAddress:ownerWallet.address
+        owner_address:ownerWallet.address
       },codeCell));
 
   })
@@ -73,7 +73,7 @@ describe('main.fc contract tests', () => {
   });
 
   it('should return deposit funds as no commands is sent', async()=>{
-    const senderWalletT = await blockchain.treasury("senderT");
+    const senderWalletT = await blockchain.treasury("sender");
     const depositMessage = await myContract.sendNoOpCodeCommand(senderWalletT.getSender(),toNano("5"));
 
     expect(depositMessage.transactions).toHaveTransaction({
